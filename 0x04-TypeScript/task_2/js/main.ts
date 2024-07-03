@@ -46,4 +46,6 @@ function createEmployee(salary: number | string): Teacher | Director {
   }
 }
 
-
+function isDirector(employee) {
+  
+}
