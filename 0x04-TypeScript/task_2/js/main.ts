@@ -46,6 +46,26 @@ function createEmployee(salary: number | string): Teacher | Director {
   }
 }
 
-function isDirector(employee) {
-  
+function isDirector(employee: Director | Teacher): string {
+  return (employee as Director).workDirectorTasks !== undefined; 
+}
+
+function executeWork(employee) {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return (employee as Teacher).workTeacherTasks();
+  }
+}
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects): sreing {
+  if (todayClass === "Math") {
+    return 'Teaching Math';
+  } else if (todayClass === "History") {
+    return 'Teaching History'
+  } else {
+    throw new Error('Invalid Subject');
+  }
 }
