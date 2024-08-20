@@ -1,5 +1,5 @@
-function displayMessage(stringVar) {
-  console.log(stringVar);
+function displayMessage(data) {
+  console.log(data);
 }
 
-module.exports = myFunction;
+module.exports = displayMessage;
